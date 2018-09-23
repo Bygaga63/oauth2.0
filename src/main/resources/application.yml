@@ -1,0 +1,39 @@
+#security:
+#  basic:
+#  enabled: false
+#  oauth2:
+#    client:
+#      clientId: 0be9429184c2c53fa54853f336e55574
+#      clientSecret: Bygaga63
+#      accessTokenUri: https://id.trusted.plus/idp/sso/oauth/token
+#      userAuthorizationUri: https://id.trusted.plus/idp/sso/authorize
+#      scope: userprofile
+#    resource:
+#      userInfoUri: https://id.trusted.plus/trustedapp/app/user/profile/get
+security:
+  basic:
+  enabled: false
+  oauth2:
+    client:
+      clientId: 2e893cdb0371d8744a20bf175366885b
+      clientSecret: Bygaga63
+      accessTokenUri: https://id.trusted.plus/idp/sso/oauth/token
+      userAuthorizationUri: https://id.trusted.plus/idp/sso/oauth
+      scope: userprofile
+      authentication-scheme: form
+    resource:
+      userInfoUri: https://id.trusted.plus/trustedapp/app/user/profile/get
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/trusted2
+    username: root
+    password: root
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+server:
+  port: 9000
